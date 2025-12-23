@@ -10,14 +10,14 @@ pipeline {
 
 		           stage('tag image') {
                         steps {
-                                sh 'docker tag msmengr/pipeimage pipeimage'
+                                sh 'docker tag msmengr/pipeimage pipeimage:v1'
                         }
                 
                      }
 
 		          stage('push image') {
                         steps {
-                                sh 'docker login -u msmengr -p !2bcought'
+                                sh 'docker login -u msmengr -p koenig123'
                         }
                 
                      }
