@@ -11,7 +11,7 @@ pipeline {
 
 		           stage('tag image') {
                         steps {
-                                sh 'docker tag msmengr/pipeimage pipeimage'
+                                sh 'docker tag pipeimage msmengr/pipeimage '
                         }
                 
                      }
