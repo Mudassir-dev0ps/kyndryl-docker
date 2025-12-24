@@ -26,7 +26,7 @@ pipeline {
 
                stage('create container') {
                         steps {
-                                sh 'docker run -dit --name mudassir msmengr/pipeimage'
+                                sh 'docker run -dit --name mudassirqic msmengr/pipeimage'
                         }
                 
                      }
