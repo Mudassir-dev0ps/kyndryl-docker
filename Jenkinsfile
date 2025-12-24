@@ -10,21 +10,22 @@ pipeline {
 
 		           stage('tag image') {
                         steps {
-                                sh 'docker tag msmengr/pipeimage pipeimage:v1'
+                                sh 'docker tag msmengr/pipeimage pipeimage'
                         }
                 
                      }
 
 		          stage('push image') {
                         steps {
-                                sh 'docker login -u msmengr -p koenig123'
+                                sh 'docker login -u msmengr -p Koenig123'
+								sh 'docker push msmengr/pipeimage'
                         }
                 
                      }
 
                stage('create container') {
                         steps {
-                                sh 'docker run -dit --name mudassir pipeimage'
+                                sh 'docker run -dit --name mudassir msmengr/pipeimage'
                         }
                 
                      }
